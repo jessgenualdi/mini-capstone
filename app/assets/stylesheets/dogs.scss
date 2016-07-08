@@ -1,0 +1,35 @@
+// Place all the styles related to the dogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+img {
+	width: 300px;
+	padding: 20px 0;
+}
+
+body {
+	background-color: turquoise;
+}
+
+ul {
+	display: inline;
+	float: left;
+}
+
+h3 {
+	font-size: 45px;
+	padding: 50px 0;
+	color:white;
+	text-align: center;
+}
+
+li {
+	font-size: 20px;
+	color: white;
+	list-style-type: none;
+}
+
+.wrapper {
+	display:block;
+	margin: auto;
+}
