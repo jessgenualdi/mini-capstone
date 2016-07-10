@@ -1,8 +1,13 @@
 class DogsController < ApplicationController
 
-	def dog
+	def index
 		@dogs = Dog.all
-		render 'dog_store.html.erb'
 	end	
+
+	def show
+		@dogs = Dog.find_by(id: params['id'])
+		render 'show.html.erb'
+	end
+	
 
 end
