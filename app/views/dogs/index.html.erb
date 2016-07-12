@@ -1,13 +1,13 @@
 
-<h3>The Dog Store</h3>
+<h3>Adopt a Dog | &hearts; |</h3>
 <% @dogs.each do |dog|%>
 	<a href="/dog_store/<%= dog.id %>">
 		<ul>
-		  <img src="<%=dog.img%>"/>
-		  <li><%= dog.breed %></li>     
-		  <li><%= dog.sex %></li>
-		  <li><%= dog.age %></li>
-		  <li><%= dog.price %></li>
+			  <div class="img_window"><img src="<%=dog.img%>"/></div>
+			  <li><%= dog.breed %></li>     
+			  <li><%= dog.sex %></li>
+			  <li><%= dog.age %></li>
+			  <li><%= dog.price %></li>
 	    </ul>
     </a>
 <% end %>

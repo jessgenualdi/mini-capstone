@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   get '/dog_store' => 'dogs#index'
+  get 'dog_store/new' => 'dogs#new'
+  post '/dog_store' => 'dogs#create'
   get '/dog_store/:id' => 'dogs#show'
+  get '/dog_store/:id/edit' => 'dogs#edit'
+  patch '/dog_store/:id' => 'dogs#update'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

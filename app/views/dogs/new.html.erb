@@ -1,0 +1,26 @@
+<h2>New Dog For Adoption</h2>
+<%= form_tag '/dog_store', method: :post do %>
+	<div>
+		<%= label_tag :breed %>
+		<%= text_field_tag :breed %>
+	</div>
+	<div>
+		<%= label_tag :sex %>
+		<%= text_field_tag :sex %>
+	</div>
+	<div>
+		<%= label_tag :age %>
+		<%= text_field_tag :age %>
+	</div>
+	<div>
+		<%= label_tag :img %>
+		<%= text_field_tag :img %>
+	</div>
+	<div>
+		<%= label_tag :price %>
+		<%= text_field_tag :price %>
+	</div>
+	<div>
+	<%= submit_tag "Add Dog" %>	
+	</div>
+<% end %>
