@@ -1,11 +1,14 @@
-<img src="<%=@dogs.img%>"/>
-<p><%= @dogs.breed %></p>     
-<p><%= @dogs.sex %></p>
-<p><%= @dogs.age %></p>
-<p><%= @dogs.price %></p>
+<img src="<%=@dog.img%>"/>
+<p><%= @dog.breed %></p>     
+<p><%= @dog.sex %></p>
+<p><%= @dog.age %></p>
+<p><%= @dog.price %></p>
 <div>
 	<a href="/dog_store">Back to Adoption Center</a>
 </div>
 <div>
-<a href="/dog_store/<%= @dogs.id %>/edit">Edit this dog's information</a>
+<a href="/dog_store/<%= @dog.id %>/edit">Edit this dog's information</a>
 </div>
+ <div>
+   <%= link_to "Delete this information", "/dog_store/#{@dog.id}", method: :delete %>
+ </div>

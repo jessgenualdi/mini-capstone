@@ -1,20 +1,24 @@
 <h1>Edit Dog:</h1>
- <%= form_tag "/dog_store/#{@dogs.id}", method: :patch do %>
+ <%= form_tag "/dog_store/#{@dog.id}", method: :patch do %>
    <div class="form-group">
      <%= label_tag :breed %>
-     <%= text_field_tag :breed, @dogs.breed, class: "form-control"  %>
+     <%= text_field_tag :breed, @dog.breed, class: "form-control"  %>
    </div>
    <div class="form-group">
      <%= label_tag :sex  %>
-     <%= text_field_tag :sex, @dogs.sex, class: "form-control"  %>
+     <%= text_field_tag :sex, @dog.sex, class: "form-control"  %>
    </div>
    <div class="form-group">
      <%= label_tag :age  %>
-     <%= text_field_tag :age, @dogs.age, class: "form-control"  %>
+     <%= text_field_tag :age, @dog.age, class: "form-control"  %>
    </div>
    <div class="form-group">
      <%= label_tag :price  %>
-     <%= text_field_tag :price, @dogs.price, class: "form-control"  %>
+     <%= text_field_tag :price, @dog.price, class: "form-control"  %>
+   </div>
+   <div class="form-group">
+     <%= label_tag :img  %>
+     <%= text_field_tag :img, @dog.img, class: "form-control"  %>
    </div>
    <%= submit_tag "Update dog", class: "btn btn-default" %>
  <% end %>
