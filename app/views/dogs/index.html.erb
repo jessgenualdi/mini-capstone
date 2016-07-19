@@ -1,15 +1,22 @@
-
 <h3>Adopt a Dog &hearts; </h3>
-<% @dog.each do |dog|%>
-	<a href="/dog_store/<%= dog.id %>">
-		<ul>
-			  <div class="img_window"><img src="<%=dog.img%>"/></div>
-			  <li><%= dog.breed.capitalize %></li>     
-			  <li><%= dog.sex.capitalize %></li>
-			  <li><%= dog.age.capitalize %></li>
-			  <li>$<%= dog.price.capitalize %></li>
-	    </ul>
-    </a>
-<% end %>
-
-<a href="/dog_store/new">Add a dog</a>
+<% @dog.each_slice(3) do |three_dogs|%>
+  <div class="row">
+    <% three_dogs.each do |dog|%>
+    <div class="col-md-4">
+      <div class="well">
+      	<a href="/dog_store/<%= dog.id %>">
+    		<ul>
+  			  <img src="<%=dog.img%>"/>
+  			  <li><%= dog.breed.capitalize %></li>     
+  			  <li><%= dog.sex.capitalize %></li>
+  			  <li><%= dog.age.capitalize %></li>
+  			  <li>$<%= dog.price.capitalize %></li>
+          <li><%= dog.created_at.strftime('%b %d %Y') %></li>
+  	    </ul>
+        </a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <% end %>
+  <a href="/dog_store/new">Add a dog</a>

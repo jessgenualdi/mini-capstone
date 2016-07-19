@@ -1,8 +1,20 @@
 <img src="<%=@dog.img%>"/>
-<p><%= @dog.breed %></p>     
-<p><%= @dog.sex %></p>
-<p><%= @dog.age %></p>
-<p><%= @dog.price %></p>
+<p>Breed: <%= @dog.breed %></p>     
+<p>Gender: <%= @dog.sex %></p>
+<p>Age: <%= @dog.age %></p>
+
+<% if @dog.discount? %> 
+<p>Price: $<%= @dog.price %></p>
+<p>Discount item!</p>
+<% else %>
+<p>Everyday value!</p>
+<% end %>
+
+<p>Price: $<%= @dog.price %></p>
+<p>Tax: $<%= @dog.tax %></p>
+<p>Total: $<%= @dog.total %></p>
+
+
 <div>
 	<a href="/dog_store">Back to Adoption Center</a>
 </div>

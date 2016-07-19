@@ -2,40 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.img_window {
-	widtH: 300px;
-	height: 250px;
-	overflow: hidden;
-}
 
-img {
-	width: 300px;
-	padding: 20px 0;
-}
-
-
+.well img {
+   width: 100%;
+ }
 
 body {
 	background-color: turquoise;
 	min-height: 2000px;
+	font-family: Futura,"Trebuchet MS",Arial,sans-serif;
 }
 
-ul {
-	display: inline;
-	float: left;
-}
 
 h3 {
 	font-size: 45px;
 	padding: 50px 0;
-	color:white;
+	color:black;
 	text-align: center;
 }
 
 h2 {
 	font-size: 35px;
 	padding: 50px 0;
-	color:white;
+	color:black;
 	text-align: center;
 }
 
@@ -59,11 +48,11 @@ submit {
 
 li {
 	font-size: 20px;
-	color: white;
+	color: black;
 	list-style-type: none;
 }
 
-ul {
+.container ul {
 	min-height: 400px;
 }
 
