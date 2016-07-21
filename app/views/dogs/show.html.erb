@@ -24,3 +24,29 @@
  <div>
    <%= link_to "Delete this information", "/dog_store/#{@dog.id}", method: :delete %>
  </div>
+
+ <%= form_tag '/orders', method: :post do %>
+  <div>
+    <%= label_tag :quantity %>
+    <%= text_field_tag :quantity %>
+  </div>
+  <div>
+    <%= label_tag :product_id, 'Dog ID' %>
+    <%= text_field_tag :product_id, @dog.id %>
+  </div>
+  <div>
+    <%= label_tag :subtotal  %>
+    <%= text_field_tag :subtotal, @dog.price  %>
+  </div>
+  <div>
+    <%= label_tag :tax  %>
+    <%= text_field_tag :tax, @dog.tax  %>
+  </div>
+  <div>
+    <%= label_tag :total  %>
+    <%= text_field_tag :total, @dog.total  %>
+  </div>
+  <div>
+  <%= submit_tag "Buy Now!" %> 
+  </div>
+<% end %>

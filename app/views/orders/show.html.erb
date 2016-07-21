@@ -1,0 +1,10 @@
+<h1>You Order</h1>
+<p>order: <%= @order.id %></p>  
+<p>quantity: <%= @order.quantity %></p>  
+<p>subtotal: <%= @order.subtotal %></p>  
+<p>tax <%= @order.tax %></p>  
+<p>total: <%= @order.total %></p>  
+<p>email <%= current_user.email %></p>  
+<p>dog <%= @dog.breed %></p>
+<img src="<%= @dog.img %>"/>
+<p>time of purchase<%= @dog.created_at %></p>  
