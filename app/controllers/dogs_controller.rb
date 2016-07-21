@@ -6,6 +6,7 @@ class DogsController < ApplicationController
 
 	def show
 		@dog = Dog.find_by(id: params['id'])
+    @images = @dog.images
 		render 'show.html.erb'
 	end
 	
@@ -18,7 +19,6 @@ class DogsController < ApplicationController
 			breed: params['breed'],
 			sex: params['sex'],
 			age: params['age'],
-			img: params['img'],
 			price: params['price']
 			)
 		@dog.save
@@ -33,10 +33,9 @@ class DogsController < ApplicationController
 	def update
  	   @dog = Dog.find_by(id: params['id'])
  	   @dog.update(
-		    breed: params['breed'],
+		  breed: params['breed'],
 			sex: params['sex'],
 			age: params['age'],
-			img: params['img'],
 			price: params['price']
      )
       render 'update.html.erb'

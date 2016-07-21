@@ -1,4 +1,5 @@
 class Dog < ActiveRecord::Base
+  has_many :images
   has_many :orders
   def discount?
     price.to_f < 300 

@@ -1,4 +1,8 @@
-<img src="<%=@dog.img%>"/>
+
+<% @images.each do |image| %>
+  <img src="<%= image.url %>"/>
+<% end %>
+
 <p>Breed: <%= @dog.breed %></p>     
 <p>Gender: <%= @dog.sex %></p>
 <p>Age: <%= @dog.age %></p>
@@ -25,14 +29,10 @@
    <%= link_to "Delete this information", "/dog_store/#{@dog.id}", method: :delete %>
  </div>
 
- <%= form_tag '/orders', method: :post do %>
+ <%= form_tag "/orders/#{@dog.id}", method: :post do %>
   <div>
     <%= label_tag :quantity %>
     <%= text_field_tag :quantity %>
-  </div>
-  <div>
-    <%= label_tag :product_id, 'Dog ID' %>
-    <%= text_field_tag :product_id, @dog.id %>
   </div>
   <div>
     <%= label_tag :subtotal  %>

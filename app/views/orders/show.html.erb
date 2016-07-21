@@ -6,5 +6,5 @@
 <p>total: <%= @order.total %></p>  
 <p>email <%= current_user.email %></p>  
 <p>dog <%= @dog.breed %></p>
-<img src="<%= @dog.img %>"/>
+<img src="<%= @dog.images[0].url %>"/>
 <p>time of purchase<%= @dog.created_at %></p>  

@@ -6,7 +6,7 @@
       <div class="well">
       	<a href="/dog_store/<%= dog.id %>">
     		<ul>
-  			  <img src="<%=dog.img%>"/>
+  			  <img src="<%= dog.images[0].url %>"/>
   			  <li><%= dog.breed.capitalize %></li>     
   			  <li><%= dog.sex.capitalize %></li>
   			  <li><%= dog.age.capitalize %></li>
