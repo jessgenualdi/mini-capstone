@@ -1,4 +1,6 @@
 class Dog < ActiveRecord::Base
+  has_many :categorized_dogs
+  has_many :categories, through: :categorized_dogs
   has_many :images
   has_many :orders
   def discount?
