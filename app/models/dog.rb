@@ -3,6 +3,9 @@ class Dog < ActiveRecord::Base
   has_many :categories, through: :categorized_dogs
   has_many :images
   has_many :orders
+  has_many :carted_products
+  
+
   def discount?
     price.to_f < 300 
   end

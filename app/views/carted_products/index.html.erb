@@ -1,0 +1,15 @@
+<h1>Your Shopping Cart</h1>
+<ul>
+  <% @users_cart.each do |carted| %>
+      <li><%= carted.quantity %></li>
+      <li><%= carted.dog.breed %></li>
+  <% end %>
+</ul>
+
+
+
+<%= form_tag "/orders", method: :post do %>
+  <div>
+  <%= submit_tag "Buy Now!" %> 
+  </div>
+<% end %>

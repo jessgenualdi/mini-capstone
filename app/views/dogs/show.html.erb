@@ -29,7 +29,7 @@
    <%= link_to "Delete this information", "/dog_store/#{@dog.id}", method: :delete %>
  </div>
 
- <%= form_tag "/orders/#{@dog.id}", method: :post do %>
+ <%= form_tag "/carted_products/#{@dog.id}", method: :post do %>
   <div>
     <%= label_tag :quantity %>
     <%= text_field_tag :quantity %>
@@ -47,6 +47,6 @@
     <%= text_field_tag :total, @dog.total  %>
   </div>
   <div>
-  <%= submit_tag "Buy Now!" %> 
+  <%= submit_tag "Add to Cart!" %> 
   </div>
 <% end %>
