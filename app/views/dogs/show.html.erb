@@ -23,11 +23,13 @@
 	<a href="/dog_store">Back to Adoption Center</a>
 </div>
 <div>
+<% if current_user.admin %>
 <a href="/dog_store/<%= @dog.id %>/edit">Edit this dog's information</a>
 </div>
  <div>
    <%= link_to "Delete this information", "/dog_store/#{@dog.id}", method: :delete %>
  </div>
+ <% end %>
 
  <%= form_tag "/carted_products/#{@dog.id}", method: :post do %>
   <div>

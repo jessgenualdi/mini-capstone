@@ -1,8 +1,9 @@
 <h1>Confirmation Order</h1>
 <p>order: <%= @order.id %></p>  
 <p>quantity: <%= @order.quantity %></p>  
-<% @users_cart.each do |carted| %>
+<% @carted_products.each do |carted| %>
     <p>Breed: <%= carted.dog.breed.upcase %></p>
+    <p>Breed: <%= carted.quantity %></p>
 <% end %>
 <p>subtotal: <%= @order.subtotal %></p>  
 <p>tax <%= @order.tax %></p>  

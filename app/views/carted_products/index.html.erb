@@ -1,8 +1,9 @@
-<h1>Your Shopping Cart</h1>
+<h1>Checkout Page</h1>
 <ul>
   <% @users_cart.each do |carted| %>
       <li><%= carted.quantity %></li>
       <li><%= carted.dog.breed %></li>
+      <%= link_to "Remove from cart", "/carted_products", method: :delete %>
   <% end %>
 </ul>
 

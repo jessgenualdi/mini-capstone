@@ -1,7 +1,12 @@
 class CartedProductsController < ApplicationController
   def index
-    in_cart = CartedProduct.where(status: "carted")
-    @users_cart = in_cart.where(user_id: current_user.id)
+    @users_cart = CartedProduct.where(status: "carted", user_id: current_user.id)
+    if @users_cart.length > 0
+      render "index.html.erb"
+    else
+      flash[:warning] = "You have no items in your cart."
+      redirect_to "/"
+    end
   end
 
   def create

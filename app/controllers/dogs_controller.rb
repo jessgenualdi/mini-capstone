@@ -1,4 +1,7 @@
 class DogsController < ApplicationController
+  before_action :authenticate_admin!, except: [:index, :show]
+
+
   def index
     @dog =Dog.all
     if params[:category]
@@ -40,6 +43,7 @@ class DogsController < ApplicationController
       age: params['age'],
       price: params['price']
     )
+
     render 'update.html.erb'
   end
 

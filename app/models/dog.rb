@@ -4,7 +4,10 @@ class Dog < ActiveRecord::Base
   has_many :images
   has_many :orders
   has_many :carted_products
-  
+
+  validates :name, uniqueness: true, presence: true
+  validates :price, numericality: true, presence: true
+  validates :description, presence: true, length: { maximum: 500 }
 
   def discount?
     price.to_f < 300 
